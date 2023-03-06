@@ -1,0 +1,9 @@
+ignores: [
+  "@commitlint/cli",
+  "@commitlint/config-conventional",
+  "@testing-library/user-event",
+  "@types/jest",
+  "@types/node",
+  "depcheck",
+  "sass"
+]

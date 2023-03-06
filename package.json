@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://naasse.github.io/happy-kind-academy",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -13,18 +16,42 @@
     "@types/react-dom": "^18.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "sass": "^1.58.3",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "cross-env": "^7.0.3",
+    "depcheck": "^1.4.3",
+    "eslint-config-react-app": "^7.0.1",
+    "gh-pages": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PUBLIC_URL=http://localhost:3000/ react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prepare": "husky install",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "*": [
+      "yarn depcheck ."
+    ],
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "**/*": "prettier --write --ignore-unknown"
   },
   "eslintConfig": {
     "extends": [
@@ -43,8 +70,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }
