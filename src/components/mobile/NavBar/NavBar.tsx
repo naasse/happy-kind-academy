@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, ReactElement } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,9 +7,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./NavBar.module.scss";
+import { useMobile } from "../../../hooks/useMobile";
 
-export default function NavBar() {
+export type Props = {
+  links: ReactElement[];
+};
+
+export default function NavBar(props: Props) {
+  const { links } = props;
   const [navExpanded, setNavExpanded] = useState(false);
+
+  const { isMobile } = useMobile();
 
   return (
     <nav className={styles["nav-content"]}>
@@ -19,10 +26,11 @@ export default function NavBar() {
         <FontAwesomeIcon icon={navExpanded ? faLongArrowUp : faLongArrowDown} />
       </button>
       {navExpanded && (
-        <div>
-          <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
-          <Link to="/bogus">Broken Page</Link>
-        </div>
+        <ul>
+          {links.map((link) => (
+            <li key={link.key}>{link}</li>
+          ))}
+        </ul>
       )}
     </nav>
   );

@@ -1,3 +1,18 @@
+@import "../../variables.scss";
+
 .nav-content {
-  background-color: lightblue;
+  background-color: $nav-color;
+
+  ul {
+    @include navbar-ul;
+
+    li a {
+      @include navbar-ul-li-a;
+      padding: 8px 16px;
+    }
+
+    li a:hover {
+      @include navbar-ul-li-a-hover;
+    }
+  }
 }

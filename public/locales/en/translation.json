@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "Happy Kind Academy",
+    "home": "Home",
+    "about": "About"
+  },
+  "error-page": {
+    "oops": "Oops!",
+    "title": "Sorry, an unexpected error has occurred.",
+    "go-home": "Go Home",
+    "details": "Details:"
+  }
+}

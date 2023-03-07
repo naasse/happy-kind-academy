@@ -1,20 +1,20 @@
-import { Link } from "react-router-dom";
+import { ReactElement } from "react";
 
 import styles from "./NavBar.module.scss";
 
-export default function NavBar() {
+export type Props = {
+  links: ReactElement[];
+};
+
+export default function NavBar(props: Props) {
+  const { links } = props;
+
   return (
     <nav className={styles["nav-content"]}>
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/bogus">Broken Page</Link>
-        </li>
+        {links.map((link) => (
+          <li key={link.key}>{link}</li>
+        ))}
       </ul>
     </nav>
   );
