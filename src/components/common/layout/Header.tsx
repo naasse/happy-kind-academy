@@ -23,7 +23,7 @@ export function Header() {
         Broken Page (Testing)
       </Link>,
     ];
-  }, []);
+  }, [t]);
 
   return (
     <header id="header">

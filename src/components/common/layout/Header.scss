@@ -13,4 +13,12 @@
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 2rem;
   }
+
+  @media (max-width: 768px) {
+    #title {
+      line-height: 2.65rem;
+      font-size: 1.33rem;
+      padding-left: 1.33rem;
+    }
+  }
 }

@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Root } from "./components/common/layout/Root";
 import ErrorPage from "./views/ErrorPage";
 
-const routerBaseName =
-  process.env.NODE_ENV === "production" ? "/happy-kind-academy" : undefined;
+const routerBaseName = "/happy-kind-academy";
+// process.env.NODE_ENV === "production" ? "/happy-kind-academy" : undefined;
 
 const router = createBrowserRouter(
   [

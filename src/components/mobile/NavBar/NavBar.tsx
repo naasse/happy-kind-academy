@@ -7,7 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./NavBar.module.scss";
-import { useMobile } from "../../../hooks/useMobile";
 
 export type Props = {
   links: ReactElement[];
@@ -16,8 +15,6 @@ export type Props = {
 export default function NavBar(props: Props) {
   const { links } = props;
   const [navExpanded, setNavExpanded] = useState(false);
-
-  const { isMobile } = useMobile();
 
   return (
     <nav className={styles["nav-content"]}>

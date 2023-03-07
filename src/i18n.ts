@@ -9,8 +9,11 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    debug: true,
+    debug: process.env.NODE_ENV !== "production",
     interpolation: {
       escapeValue: false,
+    },
+    backend: {
+      loadPath: "happy-kind-academy/locales/{{lng}}/{{ns}}.json",
     },
   });
