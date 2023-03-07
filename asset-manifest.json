@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/happy-kind-academy/static/css/main.c990d850.css",
-    "main.js": "/happy-kind-academy/static/js/main.d3d3fea8.js",
+    "main.js": "/happy-kind-academy/static/js/main.1f48ab2d.js",
     "static/css/768.9b1fcc09.chunk.css": "/happy-kind-academy/static/css/768.9b1fcc09.chunk.css",
     "static/js/768.8d05e72a.chunk.js": "/happy-kind-academy/static/js/768.8d05e72a.chunk.js",
     "static/css/463.6a212536.chunk.css": "/happy-kind-academy/static/css/463.6a212536.chunk.css",
@@ -11,7 +11,7 @@
     "index.html": "/happy-kind-academy/index.html",
     "static/media/getFetch.cjs": "/happy-kind-academy/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.c990d850.css.map": "/happy-kind-academy/static/css/main.c990d850.css.map",
-    "main.d3d3fea8.js.map": "/happy-kind-academy/static/js/main.d3d3fea8.js.map",
+    "main.1f48ab2d.js.map": "/happy-kind-academy/static/js/main.1f48ab2d.js.map",
     "768.9b1fcc09.chunk.css.map": "/happy-kind-academy/static/css/768.9b1fcc09.chunk.css.map",
     "768.8d05e72a.chunk.js.map": "/happy-kind-academy/static/js/768.8d05e72a.chunk.js.map",
     "463.6a212536.chunk.css.map": "/happy-kind-academy/static/css/463.6a212536.chunk.css.map",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.c990d850.css",
-    "static/js/main.d3d3fea8.js"
+    "static/js/main.1f48ab2d.js"
   ]
 }
