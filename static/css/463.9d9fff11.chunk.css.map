@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/463.9d9fff11.chunk.css","mappings":"AAAA,2BACE","sources":["components/mobile/NavBar/NavBar.module.scss"],"sourcesContent":[".nav-content {\n  background-color: lightblue;\n}\n"],"names":[],"sourceRoot":""}

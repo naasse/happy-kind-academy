@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhappy_kind_academy=self.webpackChunkhappy_kind_academy||[]).push([[768],{768:function(n,a,e){e.r(a),e.d(a,{default:function(){return r}});var c={"nav-content":"NavBar_nav-content__vzYiA"},t=e(184);function r(n){var a=n.links;return(0,t.jsx)("nav",{className:c["nav-content"],children:(0,t.jsx)("ul",{children:a.map((function(n){return(0,t.jsx)("li",{children:n},n.key)}))})})}}}]);
+//# sourceMappingURL=768.8d05e72a.chunk.js.map
