@@ -1,4 +1,5 @@
-import { useState, ReactElement } from "react";
+import { useState, ReactElement, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,6 +16,23 @@ export type Props = {
 export default function NavBar(props: Props) {
   const { links } = props;
   const [navExpanded, setNavExpanded] = useState(false);
+  const location = useLocation();
+
+  const getLink = useMemo(
+    () => (link: ReactElement) => {
+      return (
+        <li
+          key={link.key}
+          className={
+            location.pathname === link.props.to ? styles["active"] : undefined
+          }
+        >
+          {link}
+        </li>
+      );
+    },
+    [location]
+  );
 
   return (
     <nav className={styles["nav-content"]}>
@@ -22,13 +40,7 @@ export default function NavBar(props: Props) {
       <button onClick={() => setNavExpanded((prevState) => !prevState)}>
         <FontAwesomeIcon icon={navExpanded ? faLongArrowUp : faLongArrowDown} />
       </button>
-      {navExpanded && (
-        <ul>
-          {links.map((link) => (
-            <li key={link.key}>{link}</li>
-          ))}
-        </ul>
-      )}
+      {navExpanded && <ul>{links.map(getLink)}</ul>}
     </nav>
   );
 }

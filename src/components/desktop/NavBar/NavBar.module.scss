@@ -7,16 +7,31 @@
     @include navbar-ul;
     overflow: hidden;
 
-    li {
+    li:not(.compact) {
       float: left;
 
       a {
-        @include navbar-ul-li-a;
-        padding: 14px 16px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+        display: block;
+        text-decoration: none;
       }
       a:hover {
         @include navbar-ul-li-a-hover;
       }
     }
+
+    li:not(.active):not(:hover) {
+      a {
+        @include navbar-ul-li-a;
+      }
+    }
   }
+}
+
+.active a {
+  background-color: $dark-bg;
+  color: $light-text;
 }

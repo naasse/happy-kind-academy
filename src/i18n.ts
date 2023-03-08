@@ -14,6 +14,6 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: "happy-kind-academy/locales/{{lng}}/{{ns}}.json",
+      loadPath: "/happy-kind-academy/locales/{{lng}}/{{ns}}.json",
     },
   });

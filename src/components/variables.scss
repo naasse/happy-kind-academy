@@ -14,9 +14,7 @@ $dark-bg: #111;
 }
 
 @mixin navbar-ul-li-a {
-  display: block;
   color: $dark-text;
-  text-decoration: none;
 }
 
 @mixin navbar-ul-li-a-hover {
