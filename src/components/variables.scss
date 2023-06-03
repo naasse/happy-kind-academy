@@ -6,18 +6,3 @@ $light-text: #fff;
 $dark-text: #000;
 
 $dark-bg: #111;
-
-@mixin navbar-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-@mixin navbar-ul-li-a {
-  color: $dark-text;
-}
-
-@mixin navbar-ul-li-a-hover {
-  background-color: $dark-bg;
-  color: $light-text;
-}

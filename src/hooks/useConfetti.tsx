@@ -8,29 +8,13 @@ export function useConfetti() {
     refAnimationInstance.current = instance;
   }, []);
 
-  const makeShot = useCallback((origin: Origin, opts?: Options) => {
+  const fire = useCallback((origin: Origin, opts?: Options) => {
     refAnimationInstance.current &&
       refAnimationInstance.current({
         ...opts,
         origin: origin,
       });
   }, []);
-
-  const fire = useCallback(
-    (origin: Origin = { y: 0.7 }) => {
-      makeShot(origin, {
-        spread: 60,
-        particleCount: 40,
-      });
-
-      makeShot(origin, {
-        spread: 120,
-        startVelocity: 45,
-        particleCount: 20,
-      });
-    },
-    [makeShot]
-  );
 
   const canvas = useMemo(() => {
     return (

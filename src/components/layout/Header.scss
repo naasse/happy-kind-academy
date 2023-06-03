@@ -1,15 +1,7 @@
-@import "../../variables";
+@import "../variables";
 
 #header {
-  position: sticky;
-  top: 0;
-  background-color: $header-color;
-
   #title {
-    line-height: 4rem;
-    display: block;
-    color: $light-text;
-    padding-left: 2rem;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 2rem;
   }
@@ -18,7 +10,6 @@
     #title {
       line-height: 2.65rem;
       font-size: 1.33rem;
-      padding-left: 1.33rem;
     }
   }
 }
